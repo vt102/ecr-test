@@ -1,0 +1,27 @@
+machine:
+  python:
+    version: 2.7
+  node:
+    version: 6.10.2
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - sudo apt install libpq-dev python-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev && pip install 'awsebcli==3.7.4' --force-reinstall
+
+compile:
+  override:
+    - docker build -t wichita-ecr-andy-docker-app .
+
+test:
+  override:
+    - docker run --name wichita-ecr-andy-docker-app -p 3000:8080 -d wichita-ecr-andy-docker-app
+    - curl --retry 10 --retry-delay 5 -v http://localhost:3000
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - ls -al
+      - ./deploy.sh
