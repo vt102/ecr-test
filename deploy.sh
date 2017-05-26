@@ -5,3 +5,5 @@ docker tag wichita-ecr-andy-docker-app:latest 052763798005.dkr.ecr.us-east-1.ama
 docker push 052763798005.dkr.ecr.us-east-1.amazonaws.com/wichita-ecr-andy-docker-app:latest
 docker tag wichita-ecr-andy-docker-app:latest 052763798005.dkr.ecr.us-east-1.amazonaws.com/wichita-ecr-andy-docker-app:v${CIRCLE_BUILD_NUM}
 docker push 052763798005.dkr.ecr.us-east-1.amazonaws.com/wichita-ecr-andy-docker-app:v${CIRCLE_BUILD_NUM}
+
+./deploy.sh 052763798005.dkr.ecr.us-east-1.amazonaws.com/wichita-ecr-andy-docker-app:v${CIRCLE_BUILD_NUM}
