@@ -11,6 +11,8 @@ dependencies:
     - sudo apt install libpq-dev python-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev && pip install 'awsebcli==3.7.4' --force-reinstall
 
 compile:
+  pre:
+    - sed -i "s/v4/v${CIRCLE_BUILD_NUM}/"g server.js
   override:
     - docker build -t wichita-ecr-andy-docker-app .
 
