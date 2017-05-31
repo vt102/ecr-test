@@ -1,14 +1,24 @@
 {
-  "name": "docker_web_app",
-  "version": "1.0.0",
-  "description": "Node.js on Docker",
-  "author": "First Last <first.last@example.com>",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-      "express": "^4.13.3",
-      "uuid": "^3.0.1"
-  }
+    "name": "docker_web_app",
+    "version": "1.0.0",
+    "description": "Node.js on Docker",
+    "author": "First Last <first.last@example.com>",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.13.3",
+        "uuid": "^3.0.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vt102/ecr-test.git"
+    },
+    "keywords": [],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/vt102/ecr-test/issues"
+    },
+    "homepage": "https://github.com/vt102/ecr-test#readme"
 }

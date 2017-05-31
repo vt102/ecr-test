@@ -12,7 +12,7 @@ dependencies:
 
 compile:
   pre:
-    - sed -i "s/v4/v${CIRCLE_BUILD_NUM}/"g server.js
+    - sed -i "s/orld v4/orld v${CIRCLE_BUILD_NUM}/"g server.js
   override:
     - docker build -t wichita-ecr-andy-docker-app .
 
