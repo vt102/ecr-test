@@ -12,4 +12,4 @@ docker push 052763798005.dkr.ecr.us-east-1.amazonaws.com/wichita-ecr-andy-docker
 #     docker push 052763798005.dkr.ecr.us-east-1.amazonaws.com/${i}:0.0.${CIRCLE_BUILD_NUM}
 # done
 
-aws lambda invoke --function-name wichita-lambda-deployer-DeployerLambda-1DHCUS9GYX6FI --payload '{ "Version" : "v'${CIRCLE_BUILD_NUM}'" }' lambda-invoke-output.txt
+aws lambda invoke --function-name wichita-lambda-deployer --payload '{ "Version" : "v'${CIRCLE_BUILD_NUM}'" }' lambda-invoke-output.txt
